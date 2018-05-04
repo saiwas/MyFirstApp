@@ -6,6 +6,16 @@
 # dependencies
 /node_modules
 
+# Android
+/android/.gradle
+/android/.idea/
+/android/app/build
+/android/build
+
+# Android Studio
+/.idea/*
+*.iml
+
 # misc
 .env.local
 .env.development.local
