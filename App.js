@@ -1,11 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import FetchLocation from './components/FetchLocation';
+
 export default class App extends React.Component {
+  getUserLocationHandler = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+      console.log(position);
+    }, error => console.log(error));
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>It works here!</Text>
+        <FetchLocation onGetLocation={this.getUserLocationHandler}/>
       </View>
     );
   }
